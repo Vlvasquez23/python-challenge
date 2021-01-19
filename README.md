@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Python Homework - Py Me Up, Charlie
 
 ## Background
@@ -23,6 +24,9 @@ Both of these challenges encompass a real-world situation where your newfound Py
   * An "analysis" folder that contains your text file that has the results from your analysis.
 
 * Push the above changes to GitHub or GitLab.
+=======
+# python-challenge
+>>>>>>> 4826687e27c8248f39b7516c56519c0a20bdd1cc
 
 ## PyBank
 
