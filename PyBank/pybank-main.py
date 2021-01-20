@@ -39,9 +39,9 @@ with open(csvpath, newline='') as csvfile:
         tot_mths += 1
         net_amt += int(row[1])
 
-        # Change month to month
-        revenue_change = int(row[1]) - previous_row
-        mth_chg.append(revenue_change)
+        # Change Month To Month
+        rev_chg = int(row[1]) - previous_row
+        mth_chg.append(rev_chg)
         previous_row = int(row[1])
         mth_ct.append(row[0])
                
@@ -55,9 +55,10 @@ with open(csvpath, newline='') as csvfile:
             greatest_decr = int(row[1])
             greatest_decr_mth = row[0]  
         
-    # Calculate The Average & The Date
+    # Calculate Average Change & Month/Year
     avg_chg = sum(mth_chg)/ len(mth_chg)
     
+    # Highest and Lowest changes in "Profit/Losses" over the entire period
     highest = max(mth_chg)
     lowest = min(mth_chg)
 
@@ -67,8 +68,8 @@ print(f"---------------------------")
 print(f"Total Months: {tot_mths}")
 print(f"Total: ${net_amt}")
 print(f"Average Change: ${avg_chg:.2f}")
-print(f"Greatest Increase in Profits:, {greatest_incr_mth}, (${highest})")
-print(f"Greatest Decrease in Profits:, {greatest_decr_mth}, (${lowest})")
+print(f"Greatest Increase in Profits: {greatest_incr_mth}, (${highest})")
+print(f"Greatest Decrease in Profits: {greatest_decr_mth}, (${lowest})")
 
 # Path to output text file
 output_file = os.path.join('.', 'python-challenge', 'PyBank', 'Analysis', 'Pybank.txt')
