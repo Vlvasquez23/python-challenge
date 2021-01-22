@@ -26,9 +26,7 @@ with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     
     csv_header = next(csvreader)
-    #row = next(csvreader) 
-
-
+  
     for row in csvreader:
         voterid=row[0] 
         county=row[1] 
